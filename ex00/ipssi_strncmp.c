@@ -1,8 +1,9 @@
 int ipssi_strncmp(char *s1, char *s2, unsigned int n)
 {
 	int	i;
+	i = 0;
 
-	while (*s1 != '\0' && *s2 !='\0')
+	while (s1[i] != '\0' && s2[i] !='\0')
 	{
 		while (i < n)
 		{
@@ -17,6 +18,8 @@ int ipssi_strncmp(char *s1, char *s2, unsigned int n)
 			else if (s1[i] == s2[i])
 			{
 				i++;
+			//	*s1++;
+			//	*s2++;
 				return 0;
 			}
 		
@@ -25,5 +28,5 @@ int ipssi_strncmp(char *s1, char *s2, unsigned int n)
 }
 int main ()
 {
-	ipssi_strncmp("poutre","chose",3);
+	ipssi_strncmp("poutre","phose",2);
 }
